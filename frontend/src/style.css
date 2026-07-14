@@ -1,0 +1,175 @@
+/* ========================================
+ * MemoirAI Theme — 温暖纪念主题
+ * 主色：暖紫 (#6366f1 → #818cf8)
+ * 辅色：琥珀 (#f59e0b) 用于暖意
+ * 背景：纸白 + 极浅暖灰
+ * ======================================== */
+
+:root {
+  /* 主题色 — 暖紫渐变 */
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+  --primary-soft: #eef2ff;
+  --accent: #ec4899;
+  --warm: #f59e0b;
+
+  /* 中性色 — 暖调 */
+  --bg: #f7f5f0;
+  --bg-card: #ffffff;
+  --bg-soft: #faf9f6;
+  --border: #e8e5e0;
+  --border-soft: #f0ede8;
+
+  /* 文字 */
+  --text: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+
+  /* 状态色 */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+
+  /* 气泡 — 用户绿色、AI 白色 */
+  --bubble-user: #95ec69;
+  --bubble-user-text: #1a1a1a;
+  --bubble-ai: #ffffff;
+  --bubble-ai-text: #1f2937;
+
+  /* 阴影 — 暖调 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 24px -4px rgba(0, 0, 0, 0.10);
+  --shadow-primary: 0 4px 14px -2px rgba(99, 102, 241, 0.25);
+
+  /* 圆角 */
+  --rounded-sm: 6px;
+  --rounded: 10px;
+  --rounded-lg: 14px;
+  --rounded-xl: 20px;
+  --rounded-2xl: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Element Plus 主题色覆盖 */
+:root {
+  --el-color-primary: var(--primary);
+  --el-color-primary-light-3: var(--primary-light);
+  --el-color-primary-light-7: #c7d2fe;
+  --el-color-primary-light-9: var(--primary-soft);
+  --el-color-primary-dark-2: var(--primary-dark);
+  --el-border-radius-base: var(--rounded);
+  --el-border-radius-small: var(--rounded-sm);
+}
+
+/* 卡片通用 */
+.el-card {
+  border: 1px solid var(--border-soft) !important;
+  border-radius: var(--rounded-lg) !important;
+  box-shadow: var(--shadow) !important;
+  transition: box-shadow 0.2s ease;
+}
+.el-card:hover {
+  box-shadow: var(--shadow-md) !important;
+}
+.el-card__header {
+  border-bottom: 1px solid var(--border-soft) !important;
+  padding: 16px 20px !important;
+}
+
+/* 按钮 */
+.el-button--primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%) !important;
+  border: none !important;
+  box-shadow: var(--shadow-primary);
+  transition: all 0.2s ease;
+}
+.el-button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -2px rgba(99, 102, 241, 0.35);
+}
+
+/* 输入框 */
+.el-input__wrapper, .el-textarea__inner {
+  border-radius: var(--rounded) !important;
+  transition: all 0.2s ease;
+}
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12) !important;
+}
+
+/* 上传区 */
+.el-upload-dragger {
+  border: 2px dashed var(--border) !important;
+  border-radius: var(--rounded-lg) !important;
+  background: var(--bg-soft) !important;
+  transition: all 0.2s ease;
+}
+.el-upload-dragger:hover {
+  border-color: var(--primary-light) !important;
+  background: var(--primary-soft) !important;
+  transform: translateY(-2px);
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes dot {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60%, 100% { content: '...'; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+.animate-slide-up {
+  animation: slideUp 0.4s ease forwards;
+}

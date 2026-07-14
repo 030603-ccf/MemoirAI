@@ -1,0 +1,56 @@
+# MemoirAI .gitattributes
+# https://git-scm.com/docs/gitattributes
+
+# Normalize line endings for cross-platform collaboration
+# Windows checkouts: CRLF → LF; Linux/macOS: LF
+* text=auto eol=lf
+
+# Explicit: shell scripts and Python always LF
+*.py        text eol=lf
+*.sh        text eol=lf
+*.bash      text eol=lf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+
+# Frontend
+*.js        text eol=lf
+*.vue       text eol=lf
+*.ts        text eol=lf
+*.json      text eol=lf
+*.css       text eol=lf
+*.html      text eol=lf
+
+# Documentation
+*.md        text eol=lf diff=markdown
+*.txt       text eol=lf
+
+# Config
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.toml      text eol=lf
+*.ini       text eol=lf
+
+# Binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.pdf       binary
+*.zip       binary
+*.gz        binary
+*.tar       binary
+*.7z        binary
+*.exe       binary
+*.dll       binary
+*.so        binary
+*.dylib     binary
+*.pyd       binary
+*.pyc       binary
+*.pyo       binary
+*.npy       binary
+*.npz       binary
+
+# Diff for Markdown (use word-diff for prose)
+*.md        diff=markdown

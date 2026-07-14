@@ -1,0 +1,133 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+.ENV/
+
+# Node
+node_modules/
+frontend/node_modules/
+.pnp
+.pnp.js
+.npm
+.yarn
+
+# Build output
+frontend/dist/
+frontend/build/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+backend/*.log
+data/logs/*.txt
+!data/logs/.gitkeep
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage/
+.tox/
+.cache
+nosetests.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Project data (user generated - NEVER commit)
+data/
+!data/.gitkeep
+!data/user_settings.example.json
+
+# Specifically protect the user-private skill directory
+# (it can contain personal catchphrases, persona data, and conversation analysis)
+data/skills/000_profile.skill
+data/skills/005_insights.skill
+# Allow the bootstrap process to add new template copies on first run
+!data/skills/.gitkeep
+
+# User uploaded content
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.ogg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.pdf
+!frontend/src/assets/*
+
+# Model files (user downloads separately)
+models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pkl
+*.pyd
+
+# Local config
+config.local.*
+*.local.json
+
+# PyInstaller (allow *.spec — needed for build)
+# *.spec  (kept in git)
+# build/, dist/ (gitignored above)
+
+# Local development files
+.tmp/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.swp
+
+# OpenCode (local AI agent runtime, not part of the project)
+.opencode/
+
+# Test log files
+*.err
+

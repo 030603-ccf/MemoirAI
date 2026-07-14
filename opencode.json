@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "plan": {
+      "permission": {
+        "skill": {
+          "superpowers": "allow",
+          "planning-with-files": "allow"
+        }
+      }
+    },
+    "build": {
+      "permission": {
+        "skill": {
+          "ui-ux-pro-max": "allow",
+          "superpowers": "allow"
+        }
+      }
+    }
+  }
+}
